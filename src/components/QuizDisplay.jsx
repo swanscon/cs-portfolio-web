@@ -4,7 +4,7 @@ import { Container, Row, Button } from "react-bootstrap";
 export default function QuizDisplay({ display, question, handleDisplay, handleAnswer }) {
 	const [prompt, setPrompt] = useState("");
 	const [answers, setAnswers] = useState([]);
-	const [buttonRed, setButtonRed] = useState("");
+	// const [buttonRed, setButtonRed] = useState("");
 
 	useEffect(() => {
 		if (question !== null) {
@@ -15,11 +15,11 @@ export default function QuizDisplay({ display, question, handleDisplay, handleAn
 		}
 	}, [question]);
 
-	const handleButtonColor = (correct) => {
-		if(correct) {
+	// const handleButtonColor = (correct) => {
+	// 	if(correct) {
 
-		}
-	}
+	// 	}
+	// }
 
 	return (
 		<div className="section-main">
