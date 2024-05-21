@@ -1,0 +1,127 @@
+.link-scale {
+	display: inline-block;
+	font-size: 16px;
+	transition: 0.25s ease;
+	transform-origin: center;
+}
+
+.link-scale:hover {
+	transform: scale(1.15);
+}
+
+.link-shadow {
+	display: inline-block;
+	transition: 0.25s ease;
+}
+
+.link-shadow:hover {
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.link-bounce {
+	display: inline-block;
+	transition: all 0.25s ease;
+	position: relative;
+	top: 0;
+}
+
+.link-color {
+	display: inline-block;
+	transition: 0.25s ease;
+	position: relative;
+	top: 0;
+	border-radius: 50%;
+	color: grey;
+}
+
+.link-color:hover {
+	transition: 0.25s ease;
+	cursor: pointer;
+	color: black;
+}
+
+.animate-bounce {
+	animation-name: bounce;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes bounce {
+	0%,
+	50%,
+	100% {
+		top: 0;
+	}
+	12.5%,
+	37.5%,
+	62.5%,
+	87.5% {
+		top: -8px;
+	}
+	25%,
+	75% {
+		top: -10px;
+	}
+}
+
+.fade-in-drop {
+	opacity: 0;
+	transform: translateY(-20px);
+	visibility: hidden;
+}
+
+.fade-in {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.visible1,
+.visible2,
+.visible3 {
+	animation: fadeInDown 1s forwards;
+}
+.visible0 {
+	animation: fadeIn 1s forwards;
+}
+.visible1 {
+	animation-delay: 0s;
+}
+.visible2 {
+	animation-delay: 0.7s;
+}
+.visible3 {
+	animation-delay: 1.4s;
+}
+.visible4 {
+	animation: fadeIn 1s forwards;
+	animation-delay: 1.4s;
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.expanding-content {
+	margin: 50px;
+}

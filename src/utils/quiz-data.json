@@ -1,0 +1,74 @@
+[
+    {
+        "question": "What was the subject of Connor's first website at 9-years-old?",
+        "answers": [
+            {"correct": false, "answer": "Pokémon"},
+            {"correct": false, "answer": "Super Mario Bros."},
+            {"correct": false, "answer": "Halo: Combat Evolved"},
+            {"correct": true, "answer": "Sonic the Hedgehog"}
+        ]
+    },
+    {
+        "question": "What software did Connor use to animate hundreds of webtoons throughout middle school?",
+        "answers": [
+            {"correct": false, "answer": "Macromedia Flash"},
+            {"correct": false, "answer": "Toon Boom Studio"},
+            {"correct": true, "answer": "Swish Max"},
+            {"correct": false, "answer": "Pencil2D"}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    },
+    {
+        "question": "",
+        "answers": [
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": false, "answer": ""},
+            {"correct": true, "answer": ""}
+        ]
+    }
+]
