@@ -1,11 +1,17 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
+// eslint-disable-next-line
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// eslint-disable-next-line
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import "../styles/images.css";
 import "../styles/animation.css";
 
 export default function MainNav() {
+	// eslint-disable-next-line
+	const [navColor, setNavColor] = useState("light");
+	// const [btnColor, setBtnColor] = useState("b");
+
 	useEffect(() => {
 		const links = document.querySelectorAll(".link-bounce");
 		links.forEach((item) => {
@@ -24,9 +30,19 @@ export default function MainNav() {
 		});
 	}, []);
 
+	// const handleNavColor = () => {
+	// 	if (navColor === "light") {
+	// 		setNavColor("dark");
+	// 		setBtnColor("w")
+	// 	} else {
+	// 		setNavColor("light");
+	// 		setBtnColor("b")
+	// 	}
+	// };
+
 	return (
 		<header>
-			<Navbar className="bg-body-tertiary">
+			<Navbar bg={navColor} data-bs-theme={navColor}>
 				<Container>
 					<Navbar.Brand href="/">
 						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
@@ -48,9 +64,10 @@ export default function MainNav() {
 							Contact
 						</Nav.Link>
 					</Nav>
-					<Navbar.Brand className="link-color"><FontAwesomeIcon icon={faCircleHalfStroke}/></Navbar.Brand>
+					{/* <Navbar.Brand className={`link-color-`+`${btnColor}`} onClick={handleNavColor}>
+						<FontAwesomeIcon icon={faCircleHalfStroke} />
+					</Navbar.Brand> */}
 				</Container>
-					
 			</Navbar>
 		</header>
 	);

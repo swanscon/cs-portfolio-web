@@ -25,7 +25,7 @@
 	top: 0;
 }
 
-.link-color {
+.link-color-b {
 	display: inline-block;
 	transition: 0.25s ease;
 	position: relative;
@@ -34,10 +34,25 @@
 	color: grey;
 }
 
-.link-color:hover {
+.link-color-b:hover {
 	transition: 0.25s ease;
 	cursor: pointer;
 	color: black;
+}
+
+.link-color-w {
+	display: inline-block;
+	transition: 0.25s ease;
+	position: relative;
+	top: 0;
+	border-radius: 50%;
+	color: grey;
+}
+
+.link-color-w:hover {
+	transition: 0.25s ease;
+	cursor: pointer;
+	color: white;
 }
 
 .animate-bounce {
