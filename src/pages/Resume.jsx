@@ -617,9 +617,13 @@ function ProjectItem({ project }) {
 						</NavLink>
 					)}
 				</div>
+				
+			</Col>
+			<Col className="project-info">
 				<p>{project.description}</p>
-
-				<div className="center-horizontal tech-icons">
+			</Col>
+			<Col className="project-info">
+			<div className="center-horizontal tech-icons">
 					{project.tech.map((logo, index) => (
 						<Image key={index} src={logo} alt="Tech Logo" className="tech-icon" />
 					))}

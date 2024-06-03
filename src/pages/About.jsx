@@ -4,7 +4,7 @@ import * as Logos from '../assets/logos';
 
 export default function AboutPage() {
 	return (
-		<div>
+		<div className="home-page">
 			<Container className="main-content">
 				<Row className="center-horizontal">
 					<h1 className="section-title">About Connor</h1>
@@ -12,7 +12,7 @@ export default function AboutPage() {
 				<div className="empty-space-sm" />
 				<Row>
 					
-					<Col>
+					<Col className="section-about">
 						<p>
 							Connor began his developer journey all the way back at the age of 9,
 							putting together a simple Sonic the Hedgehog&#8482; fan page using

@@ -59,7 +59,7 @@ export default function HomePage() {
 	};
 
 	return (
-		<div>
+		<div className="home-page">
 			<Container className="main-content">
 				<Row className="center-horizontal">
 					<Image

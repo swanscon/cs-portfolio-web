@@ -1,7 +1,6 @@
 .resume-page {
 	background-color: #f7f7f7;
 	padding: 20px;
-	font-family: Arial, sans-serif;
 }
 
 .main-content {
@@ -69,6 +68,8 @@
 
 .links-container {
 	margin-top: 10px;
+	display: flex;
+	text-align: center;
 }
 
 .tech-icons {
@@ -80,14 +81,14 @@
 
 .tech-icon {
 	max-width: 40px;
-    max-height: 40px;
+	max-height: 40px;
 	height: auto;
 }
 
 h4 {
 	font-size: 20px;
 	margin-bottom: 5px;
-	color: #007bff;
+	color: #298e25;
 }
 
 b {
@@ -104,4 +105,22 @@ i {
 p {
 	color: #333;
 	line-height: 1.5;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+/* New CSS for responsive design */
+@media (max-width: 768px) {
+	.project-item {
+		flex-direction: column;
+	}
+
+	.project-info {
+		margin-bottom: 20px;
+	}
+
+	.tech-icon {
+		max-width: 25px;
+		max-height: 25px;
+		height: auto;
+	}
 }

@@ -108,3 +108,13 @@
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
+/* New CSS for responsive design */
+@media (max-width: 768px) {
+	.img-icon,
+	.img-icon-md,
+	.img-icon-sm,
+	.img-icon-pad {
+		width: 17px;
+	}
+}

@@ -73,7 +73,7 @@ export default function ContactPage() {
 	};
 
 	return (
-		<div>
+		<div className="home-page">
 			<AlertComponent
 				visible={alertVisible}
 				message={alertMessage}
