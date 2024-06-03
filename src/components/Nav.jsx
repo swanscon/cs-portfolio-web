@@ -42,7 +42,7 @@ export default function MainNav() {
 
 	return (
 		<header>
-			<Navbar bg={navColor} data-bs-theme={navColor}>
+			<Navbar bg={navColor} data-bs-theme={navColor} expand="lg">
 				<Container>
 					<Navbar.Brand href="/">
 						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
@@ -50,20 +50,23 @@ export default function MainNav() {
 					<Navbar.Brand href="/" className="link-bounce">
 						Connor Swanson
 					</Navbar.Brand>
-					<Nav className="me-auto">
-						<Nav.Link href="/" className="link-scale">
-							Home
-						</Nav.Link>
-						<Nav.Link href="/about" className="link-scale">
-							About
-						</Nav.Link>
-						<Nav.Link href="/resume" className="link-scale">
-							Resume
-						</Nav.Link>
-						<Nav.Link href="/contact" className="link-scale">
-							Contact
-						</Nav.Link>
-					</Nav>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Nav className="me-auto">
+							<Nav.Link href="/" className="link-scale">
+								Home
+							</Nav.Link>
+							<Nav.Link href="/about" className="link-scale">
+								About
+							</Nav.Link>
+							<Nav.Link href="/resume" className="link-scale">
+								Resume
+							</Nav.Link>
+							<Nav.Link href="/contact" className="link-scale">
+								Contact
+							</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
 					{/* <Navbar.Brand className={`link-color-`+`${btnColor}`} onClick={handleNavColor}>
 						<FontAwesomeIcon icon={faCircleHalfStroke} />
 					</Navbar.Brand> */}
