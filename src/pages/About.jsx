@@ -3,6 +3,12 @@ import { NavLink } from "react-router-dom";
 import * as Logos from '../assets/logos';
 
 export default function AboutPage() {
+	
+	const handleScrollToTop = () => {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+
 	return (
 		<div className="home-page">
 			<Container className="main-content">
@@ -29,51 +35,8 @@ export default function AboutPage() {
 					</Col>
 					
 				</Row>
-
-				{/* <p>
-						Connor Swanson's journey through the software engineering landscape reflects
-						a blend of rigorous training and real-world application. At Hack Reactor, an
-						immersive software engineering program, Connor honed his skills by tackling
-						complex projects that simulated professional work environments. Notable
-						among these were FOMORE, CarCar, and a project management app—each
-						presenting unique challenges and learning opportunities. In FOMORE, Connor
-						engineered a scalable back-end using FastAPI and MongoDB, and crafted a
-						user-friendly front-end with React and Redux, focusing on seamless itinerary
-						building with dynamic search functionalities. Similarly, his work on CarCar
-						demonstrated his proficiency in full-stack development, using Django and
-						React to create an intuitive and efficient web application.
-					</p>
-					<p>
-						During his mentorship at Aston Technologies, Connor's role expanded
-						significantly through the development of TABLFG, an event-scheduling
-						application. This project allowed him to deepen his expertise in Java and
-						Spring Boot within a microservices architecture, utilizing Kafka for
-						asynchronous communication and enhancing security measures with Spring
-						Security. This experience not only solidified his back-end development
-						skills but also refined his capabilities in building reactive front-end
-						interfaces with advanced user interactions, showcasing his ability to adapt
-						and excel in a professional tech environment.
-					</p>
-					<p>
-						Parallel to his structured learning and project experiences, Connor also
-						engaged in freelance and personal projects that underscored his adaptability
-						and innovation. His work on the Equip Load Calculator, a Vue.js-based
-						application for players of the FromSoftware game Elden Ring&trade;,
-						showcased his skill in using modern web technologies like Vue Router and
-						Pinia to create engaging and responsive user interfaces. Additionally, his
-						development of the Tree Top Insurance portal exemplified his ability to
-						deliver comprehensive web solutions that cater to specific business needs,
-						utilizing React for a seamless user experience across various insurance
-						services. Through these projects, Connor has demonstrated not only technical
-						proficiency across a broad range of technologies but also a keen ability to
-						apply his skills to diverse scenarios, making him a versatile and capable
-						software engineer ready to tackle any challenge.
-					</p> */}
-				{/* <Row className="center-horizontal">
-					<NavLink to="/quiz" className="section-btn" style={{textDecoration: 'none'}}>Take the Quiz to Learn More!</NavLink>
-				</Row> */}
 				<Row className="center-horizontal">
-					<NavLink to="/resume" className="section-btn" style={{textDecoration: 'none'}}>Check out my Resumé!</NavLink>
+					<NavLink to="/resume" className="section-btn" style={{textDecoration: 'none'}} onClick={handleScrollToTop} >Check out my Resumé!</NavLink>
 				</Row>
 				<Row className="center-horizontal">
 					<h2 className="text-section">Technical Proficiencies</h2>

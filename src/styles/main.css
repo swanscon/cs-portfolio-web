@@ -8,6 +8,16 @@ li {
 
 body {
 	background-color: #f7f7f7;
+	min-height: 100vh;
+	margin: 0;
+	position: relative;
+}
+
+.nav-foot {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
 }
 
 .home-page {
@@ -16,6 +26,7 @@ body {
 
 .main-content {
 	margin: 0 auto;
+	margin-bottom: 50px;
 	max-width: 900px;
 	padding: 20px;
 	background-color: white;
@@ -114,6 +125,7 @@ body {
 	margin: 3px;
 	transition: transform 0.2s ease;
 	overflow: hidden;
+	border-radius: 5px;
 }
 
 .section-btn-sm {
@@ -129,13 +141,13 @@ body {
 }
 
 .section-btn::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 20px; /* Increase or decrease based on your preference */
-    pointer-events: none; /* This pseudo-element shouldn't affect mouse events */
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 25px; /* Increase or decrease based on your preference */
+	pointer-events: none; /* This pseudo-element shouldn't affect mouse events */
 }
 
 .section-btn:hover {
@@ -144,12 +156,12 @@ body {
 	background-color: rgb(255, 255, 255);
 	border: solid rgb(243, 243, 243) 2px;
 	box-shadow: 0 1px 4px rgb(0, 0, 0);
-	transform: translateY(-2px);
+	/* transform: translateY(-2px); */
 	margin-bottom: 5px;
 }
 
 .section-btn:hover:not(::after) {
-    pointer-events: auto;
+	pointer-events: auto;
 }
 
 .section-btn-sm:hover {
@@ -161,7 +173,7 @@ body {
 
 .section-main {
 	color: rgb(56, 56, 56);
-	background-color:rgb(247, 247, 247);
+	background-color: rgb(247, 247, 247);
 	border: solid rgb(207, 207, 207) 2px;
 	border-radius: 5px;
 	padding-top: 5px;
@@ -171,12 +183,12 @@ body {
 
 .section-about {
 	color: rgb(56, 56, 56);
-	background-color:rgb(247, 247, 247);
+	background-color: rgb(247, 247, 247);
 	border: solid rgb(207, 207, 207) 2px;
 	border-radius: 5px;
 	padding: 15px;
 	margin: 10px;
-	font-family:'Courier New', Courier, monospace;
+	font-family: "Courier New", Courier, monospace;
 }
 
 .empty-space {
@@ -193,15 +205,15 @@ body {
 }
 
 .banner-alert {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
 }
 
 .alert-red {
@@ -222,3 +234,5 @@ body {
 	color: rgb(133, 0, 0);
 	pointer-events: none;
 }
+
+

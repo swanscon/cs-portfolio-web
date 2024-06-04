@@ -1,12 +1,18 @@
 .link-scale {
 	display: inline-block;
 	font-size: 16px;
-	transition: 0.25s ease;
-	transform-origin: center;
 }
 
-.link-scale:hover {
-	transform: scale(1.15);
+@media (min-width: 769px) {
+	.link-scale {
+		display: inline-block;
+		font-size: 16px;
+		transition: 0.25s ease;
+		transform-origin: center;
+	}
+	.link-scale:hover {
+		transform: scale(1.15);
+	}
 }
 
 .link-shadow {
