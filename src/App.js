@@ -7,18 +7,19 @@ import MainNav from "./components/Nav";
 import Footer from "./components/Foot";
 import "./styles/images.css";
 import "./styles/main.css";
-import QuizPage from "./pages/Quiz";
+import { useDarkMode } from "./utils/DarkModeContext";
 
 function App() {
+	const { isDarkMode } = useDarkMode();
+
 	return (
-		<div>
+		<div className={isDarkMode ? 'dark-mode' : ''}>
 			<MainNav />
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="/resume" element={<ResumePage />} />
 				<Route path="/contact" element={<ContactPage />} />
-				<Route path="/quiz" element={<QuizPage />} />
 			</Routes>
 			<Footer />
 		</div>

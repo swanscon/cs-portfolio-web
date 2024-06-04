@@ -1,16 +1,13 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
-// eslint-disable-next-line
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// eslint-disable-next-line
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { useDarkMode } from '../utils/DarkModeContext';
 import "../styles/images.css";
 import "../styles/animation.css";
 
 export default function MainNav() {
-	// eslint-disable-next-line
-	const [navColor, setNavColor] = useState("light");
-	// const [btnColor, setBtnColor] = useState("b");
+	const { isDarkMode, toggleDarkMode } = useDarkMode();
 
 	useEffect(() => {
 		const links = document.querySelectorAll(".link-bounce");
@@ -30,19 +27,9 @@ export default function MainNav() {
 		});
 	}, []);
 
-	// const handleNavColor = () => {
-	// 	if (navColor === "light") {
-	// 		setNavColor("dark");
-	// 		setBtnColor("w")
-	// 	} else {
-	// 		setNavColor("light");
-	// 		setBtnColor("b")
-	// 	}
-	// };
-
 	return (
 		<header>
-			<Navbar bg={navColor} data-bs-theme={navColor} expand="lg">
+			<Navbar bg={isDarkMode ? "dark" : "light"} data-bs-theme={isDarkMode ? "dark" : "light"} expand="lg">
 				<Container>
 					<Navbar.Brand href="/">
 						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
@@ -67,9 +54,9 @@ export default function MainNav() {
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
-					{/* <Navbar.Brand className={`link-color-`+`${btnColor}`} onClick={handleNavColor}>
+					<Navbar.Brand className={`link-color-${isDarkMode ? 'w' : 'b'}`} onClick={toggleDarkMode}>
 						<FontAwesomeIcon icon={faCircleHalfStroke} />
-					</Navbar.Brand> */}
+					</Navbar.Brand>
 				</Container>
 			</Navbar>
 		</header>

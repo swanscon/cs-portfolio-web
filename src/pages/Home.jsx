@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Image, Row } from "react-bootstrap";
+import { useDarkMode } from "../utils/DarkModeContext";
 
 export default function HomePage() {
+	const { isDarkMode } = useDarkMode();
+
 	//connorswanson.dev
 	const [animate, setAnimate] = useState(false);
 	const [imageHover, setImageHover] = useState(false);
@@ -59,8 +62,8 @@ export default function HomePage() {
 	};
 
 	return (
-		<div className="home-page">
-			<Container className="main-content">
+		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
+			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
 				<Row className="center-horizontal">
 					<Image
 						src="/Connor001-sq.jpg"

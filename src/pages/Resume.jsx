@@ -28,7 +28,7 @@ export default function ResumePage() {
 	};
 
 	return (
-		<div className="resume-page">
+		<div className="web-page">
 			<Container className="main-content">
 				<Row className="section-title">
 					<h1>Resume</h1>

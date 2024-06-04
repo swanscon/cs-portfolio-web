@@ -1,8 +1,10 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import * as Logos from '../assets/logos';
+import { useDarkMode } from "../utils/DarkModeContext";
 
 export default function AboutPage() {
+	const { isDarkMode } = useDarkMode();
 	
 	const handleScrollToTop = () => {
 		document.body.scrollTop = 0;
@@ -10,7 +12,7 @@ export default function AboutPage() {
 	}
 
 	return (
-		<div className="home-page">
+		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
 			<Container className="main-content">
 				<Row className="center-horizontal">
 					<h1 className="section-title">About Connor</h1>
@@ -73,7 +75,7 @@ export default function AboutPage() {
 						<Image src={Logos.MySQLLogo} className="img-icon" />
 					</Col>
 					<Col className="section-grid" alt="MSSQL" title="MSSQL">
-						<Image src={Logos.MsSQLLogo} className="img-icon icon-crop scale-lg" />
+						<Image src={Logos.MsSQLLogo} className="img-icon scale-lg" />
 					</Col>
 					<Col className="section-grid" alt="PostgreSQL" title="PostgreSQL">
 						<Image src={Logos.PostgresLogo} className="img-icon-md" />

@@ -13,6 +13,13 @@ body {
 	position: relative;
 }
 
+.dark-mode body {
+	background-color: #181818;
+	min-height: 100vh;
+	margin: 0;
+	position: relative;
+}
+
 .nav-foot {
 	position: absolute;
 	bottom: 0;
@@ -20,7 +27,13 @@ body {
 	height: 50px;
 }
 
-.home-page {
+.web-page {
+	background-color: #f7f7f7;
+	padding: 20px;
+}
+
+.dark-mode-web {
+	background-color: #181818;
 	padding: 20px;
 }
 
@@ -33,6 +46,16 @@ body {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode-content {
+	margin: 0 auto;
+	margin-bottom: 50px;
+	max-width: 900px;
+	padding: 20px;
+	background-color: rgb(31, 31, 31);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	color: white;
+}
+
 .center-horizontal {
 	display: flex;
 	justify-content: center;
@@ -43,6 +66,13 @@ body {
 .text-section {
 	text-transform: uppercase;
 	text-shadow: 0 2px 3px rgb(161, 160, 172);
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+.dark-mode-text-section {
+	text-transform: uppercase;
+	text-shadow: 0 2px 3px rgb(49, 49, 49);
 	margin-top: 30px;
 	margin-bottom: 15px;
 }
@@ -101,9 +131,9 @@ body {
 
 .section-grid {
 	/* border: solid rgb(243, 243, 243) 2px; */
-	padding-top: 8px;
-	padding-bottom: 8px;
-	margin: 3px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin: 2px;
 	transition: transform 0.2s ease;
 }
 
