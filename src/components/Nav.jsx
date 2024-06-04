@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { Container, Navbar, Nav, Image } from "react-bootstrap";
+// eslint-disable-next-line
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// eslint-disable-next-line
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { useDarkMode } from '../utils/DarkModeContext';
 import "../styles/images.css";
 import "../styles/animation.css";
 
 export default function MainNav() {
+	// eslint-disable-next-line
 	const { isDarkMode, toggleDarkMode } = useDarkMode();
 
 	useEffect(() => {
@@ -54,9 +57,9 @@ export default function MainNav() {
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
-					<Navbar.Brand className={`link-color-${isDarkMode ? 'w' : 'b'}`} onClick={toggleDarkMode}>
+					{/* <Navbar.Brand className={`link-color-${isDarkMode ? 'w' : 'b'}`} onClick={toggleDarkMode}>
 						<FontAwesomeIcon icon={faCircleHalfStroke} />
-					</Navbar.Brand>
+					</Navbar.Brand> */}
 				</Container>
 			</Navbar>
 		</header>
