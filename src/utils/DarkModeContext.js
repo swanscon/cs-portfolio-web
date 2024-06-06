@@ -8,8 +8,14 @@ export const DarkModeProvider = ({ children }) => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	useEffect(() => {
-		const savedMode = localStorage.getItem("darkMode") === "true";
-		setIsDarkMode(savedMode);
+		const savedMode = localStorage.getItem("darkMode");
+		if (savedMode === null) {
+			// No saved mode, default to dark mode
+			setIsDarkMode(true);
+			localStorage.setItem("darkMode", true); // Optionally save the default to localStorage
+		} else {
+			setIsDarkMode(savedMode === "true");
+		}
 	}, []);
 
 	const toggleDarkMode = () => {
