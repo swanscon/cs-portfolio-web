@@ -17,7 +17,6 @@ export default function ContactPage() {
 		phone: "",
 		message: "",
 	});
-	// eslint-disable-next-line
 	const [loading, setLoading] = useState(false);
 
 	const handleChange = (e) => {
@@ -43,7 +42,6 @@ export default function ContactPage() {
 			});
 
 			if (response.ok) {
-				setLoading(false);
 				setAlertMessage("Your message has been sent successfully!");
 				setAlertColor("alert-blue");
 				setFormData({
@@ -53,20 +51,16 @@ export default function ContactPage() {
 					message: "",
 				});
 			} else {
-				setLoading(false);
 				setAlertMessage("Failed to send the message. Please try again later.");
 				setAlertColor("alert-red");
-				throw new Error("Network response was not ok.");
 			}
 		} catch (error) {
-			setLoading(false);
 			setAlertMessage("Failed to send the message. Please try again later.");
 			setAlertColor("alert-red");
 			console.error("Error during form submission:", error);
+		} finally {
+			setLoading(false);
 		}
-
-		setLoading(false); // Set loading to false after request ends
-		setAlertVisible(true);
 	};
 
 	const handleAlertClose = () => {
@@ -133,8 +127,12 @@ export default function ContactPage() {
 
 							<div className="empty-space-sm" />
 							<div className="center-horizontal">
-								<Button type="submit" className={`section-btn ${isDarkMode ? "btn-dark" : ""}`}>
-									Send
+								<Button
+									type="submit"
+									className={`section-btn ${isDarkMode ? "btn-dark" : ""}`}
+									disabled={loading}
+								>
+									{loading ? "Sending..." : "Send"}
 								</Button>
 							</div>
 							<div className="empty-space-sm" />
@@ -161,7 +159,9 @@ export default function ContactPage() {
 								<Row className="center-horizontal">
 									<NavLink
 										href="https://linkedin.com/in/connor-m-swanson"
-										className={`center-horizontal section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
+										className={`center-horizontal section-btn-sm ${
+											isDarkMode ? "btn-dark" : ""
+										}`}
 										target="_blank"
 									>
 										<FontAwesomeIcon icon={faLinkedin} />
@@ -169,7 +169,9 @@ export default function ContactPage() {
 
 									<NavLink
 										href="https://github.com/swanscon"
-										className={`center-horizontal section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
+										className={`center-horizontal section-btn-sm ${
+											isDarkMode ? "btn-dark" : ""
+										}`}
 										target="_blank"
 									>
 										<FontAwesomeIcon icon={faGithub} />
