@@ -78,7 +78,7 @@ export default function ContactPage() {
 				alertColor={alertColor}
 			/>
 			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
-				<h1 className={isDarkMode ? "title-dark" : "section-title"}>Contact</h1>
+				<h1 className={`title-font ${isDarkMode ? "title-dark" : "section-title"}`}>Contact</h1>
 				<Row>
 					<Col className={`section-main ${isDarkMode ? "section-dark" : ""}`}>
 						<div className="empty-space-sm" />

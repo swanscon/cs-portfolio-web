@@ -80,10 +80,10 @@ export default function HomePage() {
 					)}
 				</Row>
 				<Row className="center-horizontal">
-					<div className={`fade-in-drop ${animate ? "visible1" : ""}`}>
+					<div className={`fade-in-drop title-font ${animate ? "visible1" : ""}`}>
 						<h1>Connor Swanson</h1>
 					</div>
-					<h4 className={`fade-in-drop ${animate ? "visible2" : ""}`}>
+					<h4 className={`fade-in-drop title-font ${animate ? "visible2" : ""}`}>
 						Full-Stack Software Developer
 					</h4>
 					<p className={`fade-in-drop ${animate ? "visible3" : ""}`}>

@@ -15,7 +15,7 @@ export default function AboutPage() {
 		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
 			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
 				<Row className="center-horizontal">
-					<h1 className={isDarkMode ? "title-dark" : "section-title"}>About Connor</h1>
+					<h1 className={`title-font ${isDarkMode ? "title-dark" : "section-title"}`}>About Connor</h1>
 				</Row>
 				<div className="empty-space-sm" />
 				<Row>

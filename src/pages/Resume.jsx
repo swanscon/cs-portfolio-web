@@ -34,7 +34,7 @@ export default function ResumePage() {
 		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
 			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
 				<Row className={isDarkMode ? "title-dark" : "section-title"}>
-					<h1>Resume</h1>
+					<h1 className="title-font">Resume</h1>
 				</Row>
 				<Row className="center-horizontal">
 					<Button className={`section-btn ${isDarkMode ? "btn-dark" : ""}`} onClick={onButtonClick}>

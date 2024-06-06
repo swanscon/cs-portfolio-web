@@ -44,7 +44,7 @@ export default function MainNav({updateBackgroundColor}) {
 					<Navbar.Brand href="/">
 						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
 					</Navbar.Brand>
-					<Navbar.Brand href="/" className="link-bounce">
+					<Navbar.Brand href="/" className="link-bounce title-font">
 						Connor Swanson
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
