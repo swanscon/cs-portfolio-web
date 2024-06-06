@@ -87,7 +87,7 @@ export default function HomePage() {
 						Full-Stack Software Developer
 					</h4>
 					<p className={`fade-in-drop ${animate ? "visible3" : ""}`}>
-						<i>
+						<i className={isDarkMode ? "text-grey" : ""}>
 							Java - Spring Framework - Python - JavaScript - React - SQL -
 							Microservices
 						</i>
@@ -95,7 +95,7 @@ export default function HomePage() {
 				</Row>
 				<Row className="center-horizontal">
 					<Button
-						className={`section-btn fade-in ${animate ? "visible4" : ""}`}
+						className={`section-btn fade-in ${animate ? "visible4" : ""} ${isDarkMode ? "btn-dark" : ""}`}
 						onClick={onButtonClick}
 					>
 						Download CV

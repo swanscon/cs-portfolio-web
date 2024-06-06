@@ -13,14 +13,14 @@ export default function AboutPage() {
 
 	return (
 		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
-			<Container className="main-content">
+			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
 				<Row className="center-horizontal">
-					<h1 className="section-title">About Connor</h1>
+					<h1 className={isDarkMode ? "title-dark" : "section-title"}>About Connor</h1>
 				</Row>
 				<div className="empty-space-sm" />
 				<Row>
 					
-					<Col className="section-about">
+					<Col className={`section-about ${isDarkMode ? "section-dark" : ""}`}>
 						<p>
 							Connor began his developer journey all the way back at the age of 9,
 							putting together a simple Sonic the Hedgehog&#8482; fan page using
@@ -38,7 +38,7 @@ export default function AboutPage() {
 					
 				</Row>
 				<Row className="center-horizontal">
-					<NavLink to="/resume" className="section-btn" style={{textDecoration: 'none'}} onClick={handleScrollToTop} >Check out my Resumé!</NavLink>
+					<NavLink to="/resume" className={`section-btn ${isDarkMode ? "btn-dark" : ""}`} style={{textDecoration: 'none'}} onClick={handleScrollToTop} >Check out my Resumé!</NavLink>
 				</Row>
 				<Row className="center-horizontal">
 					<h2 className="text-section">Technical Proficiencies</h2>

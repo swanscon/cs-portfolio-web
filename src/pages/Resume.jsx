@@ -15,8 +15,11 @@ import HtmlLogo from "../assets/file-type-html.svg";
 import PythonLogo from "../assets/python.svg";
 import MongoLogo from "../assets/mongodb-original.svg";
 import "../styles/resume.css";
+import { useDarkMode } from "../utils/DarkModeContext";
 
 export default function ResumePage() {
+	const { isDarkMode } = useDarkMode();
+
 	const onButtonClick = () => {
 		const pdfUrl = "Connor-Swanson-Resume.pdf";
 		const link = document.createElement("a");
@@ -28,20 +31,20 @@ export default function ResumePage() {
 	};
 
 	return (
-		<div className="web-page">
-			<Container className="main-content">
-				<Row className="section-title">
+		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
+			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
+				<Row className={isDarkMode ? "title-dark" : "section-title"}>
 					<h1>Resume</h1>
 				</Row>
 				<Row className="center-horizontal">
-					<Button className="section-btn" onClick={onButtonClick}>
+					<Button className={`section-btn ${isDarkMode ? "btn-dark" : ""}`} onClick={onButtonClick}>
 						Download CV
 					</Button>
 				</Row>
 				<div className="empty-space-sm" />
 
 				<div className="section">
-					<h2 className="section-title">Projects</h2>
+					<h2  className={isDarkMode ? "title-dark" : "section-title"}>Projects</h2>
 					{projects.map((project, index) => (
 						<ProjectItem key={index} project={project} />
 					))}
@@ -50,7 +53,7 @@ export default function ResumePage() {
 				<div className="empty-space-sm" />
 
 				<div className="section">
-					<h2 className="section-title">Career</h2>
+					<h2  className={isDarkMode ? "title-dark" : "section-title"}>Career</h2>
 					{career.map((job, index) => (
 						<CareerItem key={index} job={job} />
 					))}
@@ -59,7 +62,7 @@ export default function ResumePage() {
 				<div className="empty-space-sm" />
 
 				<div className="section">
-					<h2 className="section-title">Education</h2>
+					<h2  className={isDarkMode ? "title-dark" : "section-title"}>Education</h2>
 					{education.map((edu, index) => (
 						<EducationItem key={index} edu={edu} />
 					))}
@@ -169,18 +172,20 @@ const education = [
 ];
 
 function ProjectItem({ project }) {
+	const { isDarkMode } = useDarkMode();
+
 	return (
 		<Row className="project-item">
 			<Col className="project-info">
 				<h4>{project.title}</h4>
 				<b>{project.role}</b>
-				<i>{project.year}</i>
+				<i className={isDarkMode ? "text-grey" : ""}>{project.year}</i>
 				<div className="links-container">
 					{project.links.github && (
 						<NavLink
 							href={project.links.github}
 							target="_blank"
-							className="section-btn-sm"
+							className={`section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
 						>
 							<FontAwesomeIcon icon={faGithub} />
 						</NavLink>
@@ -189,7 +194,7 @@ function ProjectItem({ project }) {
 						<NavLink
 							href={project.links.live}
 							target="_blank"
-							className="section-btn-sm"
+							className={`section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
 						>
 							<FontAwesomeIcon icon={faGlobe} />
 						</NavLink>
@@ -198,7 +203,7 @@ function ProjectItem({ project }) {
 						<NavLink
 							href={project.links.gitlab}
 							target="_blank"
-							className="section-btn-sm"
+							className={`section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
 						>
 							<FontAwesomeIcon icon={faGitlab} />
 						</NavLink>
@@ -221,12 +226,14 @@ function ProjectItem({ project }) {
 }
 
 function CareerItem({ job }) {
+	const { isDarkMode } = useDarkMode();
+
 	return (
 		<Row className="career-item">
 			<Col className="career-info">
 				<h4>{job.company}</h4>
 				<b>{job.role}</b>
-				<i>{job.years}</i>
+				<i className={isDarkMode ? "text-grey" : ""}>{job.years}</i>
 				<p>{job.description}</p>
 			</Col>
 		</Row>
@@ -234,12 +241,14 @@ function CareerItem({ job }) {
 }
 
 function EducationItem({ edu }) {
+	const { isDarkMode } = useDarkMode();
+
 	return (
 		<Row className="education-item">
 			<Col className="education-info">
 				<h4>{edu.institution}</h4>
 				<b>{edu.degree}</b>
-				<i>{edu.year}</i>
+				<i className={isDarkMode ? "text-grey" : ""}>{edu.year}</i>
 				<p>{edu.description}</p>
 			</Col>
 		</Row>

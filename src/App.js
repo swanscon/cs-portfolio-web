@@ -12,15 +12,25 @@ import { useDarkMode } from "./utils/DarkModeContext";
 function App() {
 	const { isDarkMode } = useDarkMode();
 
+	const updateBackgroundColor = () => {
+		if (isDarkMode) {
+			document.body.style.backgroundImage = 'url("/pf-bg-dark.png")';
+		} else {
+			document.body.style.backgroundImage = 'url("/pf-bg-light.png")';
+		}
+	};
+
 	return (
-		<div className={isDarkMode ? 'dark-mode' : ''}>
-			<MainNav />
-			<Routes>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/about" element={<AboutPage />} />
-				<Route path="/resume" element={<ResumePage />} />
-				<Route path="/contact" element={<ContactPage />} />
-			</Routes>
+		<div id="root">
+			<MainNav updateBackgroundColor={updateBackgroundColor} />
+			<div className="main-content-container">
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/resume" element={<ResumePage />} />
+					<Route path="/contact" element={<ContactPage />} />
+				</Routes>
+			</div>
 			<Footer />
 		</div>
 	);

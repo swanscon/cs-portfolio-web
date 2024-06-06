@@ -3,8 +3,11 @@ import { Col, Row, Container, Form, NavLink, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import AlertComponent from "../components/Alert";
+import { useDarkMode } from "../utils/DarkModeContext";
 
 export default function ContactPage() {
+	const { isDarkMode } = useDarkMode();
+
 	const [alertVisible, setAlertVisible] = useState(false);
 	const [alertMessage, setAlertMessage] = useState("Sending message...");
 	const [alertColor, setAlertColor] = useState("alert-grey");
@@ -73,17 +76,17 @@ export default function ContactPage() {
 	};
 
 	return (
-		<div className="web-page">
+		<div className={isDarkMode ? "dark-mode-web" : "web-page"}>
 			<AlertComponent
 				visible={alertVisible}
 				message={alertMessage}
 				onClose={handleAlertClose}
 				alertColor={alertColor}
 			/>
-			<Container className="main-content">
-				<h1 className="section-title">Contact</h1>
+			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
+				<h1 className={isDarkMode ? "title-dark" : "section-title"}>Contact</h1>
 				<Row>
-					<Col className="section-main">
+					<Col className={`section-main ${isDarkMode ? "section-dark" : ""}`}>
 						<div className="empty-space-sm" />
 						<Form onSubmit={handleSubmit}>
 							<Form.Group>
@@ -130,7 +133,7 @@ export default function ContactPage() {
 
 							<div className="empty-space-sm" />
 							<div className="center-horizontal">
-								<Button type="submit" className="section-btn">
+								<Button type="submit" className={`section-btn ${isDarkMode ? "btn-dark" : ""}`}>
 									Send
 								</Button>
 							</div>
@@ -158,7 +161,7 @@ export default function ContactPage() {
 								<Row className="center-horizontal">
 									<NavLink
 										href="https://linkedin.com/in/connor-m-swanson"
-										className="center-horizontal section-btn-sm"
+										className={`center-horizontal section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
 										target="_blank"
 									>
 										<FontAwesomeIcon icon={faLinkedin} />
@@ -166,7 +169,7 @@ export default function ContactPage() {
 
 									<NavLink
 										href="https://github.com/swanscon"
-										className="center-horizontal section-btn-sm"
+										className={`center-horizontal section-btn-sm ${isDarkMode ? "btn-dark" : ""}`}
 										target="_blank"
 									>
 										<FontAwesomeIcon icon={faGithub} />

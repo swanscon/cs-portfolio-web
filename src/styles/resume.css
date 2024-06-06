@@ -27,6 +27,15 @@
 	padding-bottom: 5px;
 }
 
+.title-dark {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #dddddd;
+	text-transform: uppercase;
+	border-bottom: 2px solid #b1b1b1;
+	padding-bottom: 5px;
+}
+
 .download-btn {
 	background-color: #007bff;
 	color: white;
@@ -88,7 +97,7 @@
 h4 {
 	font-size: 20px;
 	margin-bottom: 5px;
-	color: #298e25;
+	color: #32af2e;
 }
 
 b {
@@ -103,7 +112,7 @@ i {
 }
 
 p {
-	color: #333;
+	/* color: #333; */
 	line-height: 1.5;
 	font-family: 'Courier New', Courier, monospace;
 }

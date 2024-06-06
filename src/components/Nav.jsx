@@ -8,9 +8,18 @@ import { useDarkMode } from '../utils/DarkModeContext';
 import "../styles/images.css";
 import "../styles/animation.css";
 
-export default function MainNav() {
+export default function MainNav({updateBackgroundColor}) {
 	// eslint-disable-next-line
 	const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+	useEffect(() => {
+		updateBackgroundColor();
+	}, [isDarkMode, updateBackgroundColor]);
+
+	const handleDarkModeToggle = () => {
+		toggleDarkMode();
+		updateBackgroundColor();
+	}
 
 	useEffect(() => {
 		const links = document.querySelectorAll(".link-bounce");
@@ -32,7 +41,7 @@ export default function MainNav() {
 
 	return (
 		<header>
-			<Navbar bg={isDarkMode ? "dark" : "light"} data-bs-theme={isDarkMode ? "dark" : "light"} expand="lg">
+			<Navbar bg={isDarkMode ? "dark" : "light"} data-bs-theme={isDarkMode ? "dark" : "light"} expand="lg" className="nav-fixed">
 				<Container>
 					<Navbar.Brand href="/">
 						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
@@ -57,9 +66,9 @@ export default function MainNav() {
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
-					{/* <Navbar.Brand className={`link-color-${isDarkMode ? 'w' : 'b'}`} onClick={toggleDarkMode}>
+					<Navbar.Brand className={`link-color-${isDarkMode ? 'w' : 'b'}`} onClick={handleDarkModeToggle}>
 						<FontAwesomeIcon icon={faCircleHalfStroke} />
-					</Navbar.Brand> */}
+					</Navbar.Brand>
 				</Container>
 			</Navbar>
 		</header>
