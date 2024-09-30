@@ -66,7 +66,7 @@ export default function HomePage() {
 			<Container className={isDarkMode ? "dark-mode-content" : "main-content"}>
 				<Row className="center-horizontal">
 					<Image
-						src="/Connor001-sq.jpg"
+						src={`${process.env.PUBLIC_URL}/Connor001-sq.jpg`}
 						className={`img-small img-round img-blur image-wrapper fade-in ${
 							animate ? "visible0" : ""
 						}`}
