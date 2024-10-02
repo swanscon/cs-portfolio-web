@@ -42,7 +42,7 @@ export default function MainNav({updateBackgroundColor}) {
 			<Navbar bg={isDarkMode ? "dark" : "light"} data-bs-theme={isDarkMode ? "dark" : "light"} expand="lg" className="nav-fixed">
 				<Container>
 					<Navbar.Brand href="/">
-						<Image src="/cs-logo-removebg-preview.png" className="img-icon" />
+						<Image src={`${process.env.PUBLIC_URL}/cs-logo-removebg-preview.png`} className="img-icon" />
 					</Navbar.Brand>
 					<Navbar.Brand href="/" className="link-bounce title-font">
 						Connor Swanson

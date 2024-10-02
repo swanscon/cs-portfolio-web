@@ -1,6 +1,7 @@
 {
 	"name": "cs-portfolio-web",
 	"version": "0.1.0",
+	"homepage": "https://swanscon.github.io/cs-portfolio-web",
 	"private": true,
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -47,6 +48,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"homepage": "https://swanscon.github.io/cs-portfolio-web/"
+	}
 }
