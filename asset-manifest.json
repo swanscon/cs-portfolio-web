@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs-portfolio-web/static/css/main.4de5e1e1.css",
-    "main.js": "/cs-portfolio-web/static/js/main.8412d368.js",
+    "main.js": "/cs-portfolio-web/static/js/main.f2662ee0.js",
     "static/media/file-type-maven.svg": "/cs-portfolio-web/static/media/file-type-maven.ef3c5e1f0dfe26a25a8dcf0118e70f6f.svg",
     "static/media/postgresql.svg": "/cs-portfolio-web/static/media/postgresql.b08940403626cf1b986eb8bb9ec7ed77.svg",
     "static/media/grafana.svg": "/cs-portfolio-web/static/media/grafana.7fe57917a5ca71db2fc1f8a4df4dfa16.svg",
@@ -39,10 +39,10 @@
     "static/media/vue.svg": "/cs-portfolio-web/static/media/vue.5ab1c9fca0e56c90b62e3dfd94c7b172.svg",
     "static/media/fastapi.svg": "/cs-portfolio-web/static/media/fastapi.a8ea15acfdd82bb091e565a4f80584ed.svg",
     "main.4de5e1e1.css.map": "/cs-portfolio-web/static/css/main.4de5e1e1.css.map",
-    "main.8412d368.js.map": "/cs-portfolio-web/static/js/main.8412d368.js.map"
+    "main.f2662ee0.js.map": "/cs-portfolio-web/static/js/main.f2662ee0.js.map"
   },
   "entrypoints": [
     "static/css/main.4de5e1e1.css",
-    "static/js/main.8412d368.js"
+    "static/js/main.f2662ee0.js"
   ]
 }
