@@ -44,22 +44,22 @@ export default function MainNav({updateBackgroundColor}) {
 					<Navbar.Brand href="/">
 						<Image src={`${process.env.PUBLIC_URL}/cs-logo-removebg-preview.png`} className="img-icon" />
 					</Navbar.Brand>
-					<Navbar.Brand href="/" className="link-bounce title-font">
+					<Navbar.Brand href="/cs-portfolio-web/" className="link-bounce title-font">
 						Connor Swanson
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link href="/" className="link-scale">
+							<Nav.Link href="/cs-portfolio-web/" className="link-scale">
 								Home
 							</Nav.Link>
-							<Nav.Link href="/about" className="link-scale">
+							<Nav.Link href="/cs-portfolio-web/about" className="link-scale">
 								About
 							</Nav.Link>
-							<Nav.Link href="/resume" className="link-scale">
+							<Nav.Link href="/cs-portfolio-web/resume" className="link-scale">
 								Resume
 							</Nav.Link>
-							<Nav.Link href="/contact" className="link-scale">
+							<Nav.Link href="/cs-portfolio-web/contact" className="link-scale">
 								Contact
 							</Nav.Link>
 						</Nav>

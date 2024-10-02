@@ -14,9 +14,9 @@ function App() {
 
 	const updateBackgroundColor = () => {
 		if (isDarkMode) {
-			document.body.style.backgroundImage = 'url("/pf-bg-dark.png")';
+			document.body.style.backgroundImage = `url(${process.env.PUBLIC_URL}/pf-bg-dark.png)`;
 		} else {
-			document.body.style.backgroundImage = 'url("/pf-bg-light.png")';
+			document.body.style.backgroundImage = `url(${process.env.PUBLIC_URL}/pf-bg-light.png)`;
 		}
 	};
 
@@ -25,10 +25,10 @@ function App() {
 			<MainNav updateBackgroundColor={updateBackgroundColor} />
 			<div className="main-content-container">
 				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/about" element={<AboutPage />} />
-					<Route path="/resume" element={<ResumePage />} />
-					<Route path="/contact" element={<ContactPage />} />
+					<Route path="/cs-portfolio-web/" element={<HomePage />} />
+					<Route path="/cs-portfolio-web/about" element={<AboutPage />} />
+					<Route path="/cs-portfolio-web/resume" element={<ResumePage />} />
+					<Route path="/cs-portfolio-web/contact" element={<ContactPage />} />
 				</Routes>
 			</div>
 			<Footer />
