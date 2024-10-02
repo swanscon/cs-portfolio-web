@@ -25,10 +25,10 @@ function App() {
 			<MainNav updateBackgroundColor={updateBackgroundColor} />
 			<div className="main-content-container">
 				<Routes>
-					<Route path="/cs-portfolio-web/" element={<HomePage />} />
-					<Route path="/cs-portfolio-web/about" element={<AboutPage />} />
-					<Route path="/cs-portfolio-web/resume" element={<ResumePage />} />
-					<Route path="/cs-portfolio-web/contact" element={<ContactPage />} />
+					<Route path="/" element={<HomePage />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/resume" element={<ResumePage />} />
+					<Route path="/contact" element={<ContactPage />} />
 				</Routes>
 			</div>
 			<Footer />
