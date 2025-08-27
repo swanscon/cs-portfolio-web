@@ -1,0 +1,38 @@
+[
+    {
+        "icon": "Java",
+        "ref": "../assets/java-original.svg"
+    },
+    {
+        "icon": "Spring",
+        "ref": "../assets/spring.svg"
+    },
+    {
+        "icon": "JavaScript",
+        "ref": "../assets/javascript-js.svg"
+    },
+    {
+        "icon": "React",
+        "ref": "../assets/react.svg"
+    },
+    {
+        "icon": "Vue",
+        "ref": "../assets/vue.svg"
+    },
+    {
+        "icon": "MySQL",
+        "ref": "../assets/file-type-mysql.svg"
+    },
+    {
+        "icon": "Postman",
+        "ref": "../assets/postman.svg"
+    },
+    {
+        "icon": "Kafka",
+        "ref": "../assets/kafka-icon.svg"
+    },
+    {
+        "icon": "Git",
+        "ref": "../assets/git.svg"
+    }
+]
