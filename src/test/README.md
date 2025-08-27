@@ -15,7 +15,7 @@ Add your test files here following the project's testing conventions.
 - Use descriptive filenames.
 - Group related tests in subfolders if needed.
 
-*See: [Testing Components](https://create-react-app.dev/docs/running-tests#testing-components)*
+*See: [Testing Components](https://create-react-app.dev/docs/running-tests#testing-components) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)*
 
 ## Example
 
